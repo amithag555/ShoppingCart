@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ShoppingCart.Models.Product>
+
+<div>
+    <a asp-action="OrderByTitle" asp-controller="Product" class="ml-3">מיין לפי שם</a>
+    <a asp-action="OrderByPostDate" asp-controller="Product" class="ml-3">מיין לפי תאריך</a> 
+</div>
+
+<br /> 
+<div class="d-flex flex-wrap">
+    @foreach (var item in Model)
+    {
+        if (item.IsForSale == false) 
+        {
+            <div class="card card border-dark card text-white bg-dark mb-3 ml-5" style="width:300px">
+
+                <img src="@Url.Action("GetImage", "Product", new { Id = item.ProductId, imageNum = 1 })" class="card-img-top image-style">
+
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="card-text">@item.ShortDescription</p>
+                    <p class="card-text">מחיר: @item.Price.ToString("C0")</p>
+
+                    <span>
+                        <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.ProductId" asp-controller="Product">פרטים נוספים</a>
+                    </span>
+
+                    @if (User.Identity.IsAuthenticated) 
+                    {
+                        <span>
+                            <a class="btn btn-primary" asp-action="AddItemToCart" asp-controller="product" asp-route-productId="@item.ProductId">הוסך לסל</a>
+                        </span>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                            הוסף לסל
+                        </button> 
+
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+                            <div class="modal-dialog" role="document">
+
+                                <div class="modal-content">
+
+                                    <div class="modal-header div-color">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">הודעה התחברות</h5>  
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body div-color"> 
+                                        עלייך להתחבר על מנת להוסיף פריטים לסל
+                                    </div> 
+
+                                    <div class="modal-footer">
+                                        <a class="btn btn-secondary" asp-action="Index" asp-controller="Product">אישור</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    } 
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">פורסם בתאריך: @item.PostDate.ToShortDateString()</small>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+
+
+
+
+
+
+

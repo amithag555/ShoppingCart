@@ -1,0 +1,70 @@
+﻿
+@model ShoppingCart.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <h1>
+        @{
+            ViewData["PageName"] = "פרסום מוצר";
+        }
+    </h1>
+
+<body> 
+
+    <div class="row">  
+        <div class="col-md-4">
+            <form method="post" asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ShortDescription"></label>
+                    <input asp-for="ShortDescription" class="form-control" />
+                    <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LongDescription"></label>
+                    <textarea asp-for="LongDescription" class="form-control"></textarea>
+                    <span asp-validation-for="LongDescription" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhotoAvatar1"></label>
+                    <input asp-for="PhotoAvatar1" type="file" /> 
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhotoAvatar2"></label>
+                    <input asp-for="PhotoAvatar2" type="file" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhotoAvatar3"></label>
+                    <input asp-for="PhotoAvatar3" type="file" />
+                </div> 
+
+                <div class="form-group">
+                    <input type="submit" value="פרסם" class="btn btn-success" /> 
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">חזרה למסך ראשי</a> 
+    </div>
+</body> 

@@ -1,0 +1,121 @@
+﻿@model ShoppingCart.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>
+    @{
+        ViewData["PageName"] = "פרטים נוספים";
+    }
+</h1>
+
+
+<body class="details-body">
+
+    <h3>
+        @Html.DisplayFor(modelItem => modelItem.Title)
+    </h3>
+    <br />
+
+    <h6>מחיר:</h6>
+    <p>
+        @Html.DisplayFor(modelItem => modelItem.Price)
+    </p>
+
+    <h6>פורסם בתאריך:</h6>
+    <p>
+        @Html.DisplayFor(modelItem => modelItem.PostDate)
+    </p>
+
+    <h6>על הרכב:</h6>
+    <p>
+        @Html.DisplayFor(modelItem => modelItem.ShortDescription)
+    </p>
+
+    <p>
+        @Html.DisplayFor(modelItem => modelItem.LongDescription)
+    </p>
+    <br />
+
+    @if (Model.ImageName1 != null)
+    {
+        <span class="photo-display">
+            <img class="img-thumbnail image-style" src="@Url.Action("GetImage", "Product", new { Id = Model.ProductId, imageNum = 1 })" /> 
+        </span>
+    }
+
+    @if (Model.ImageName2 != null)
+    {
+        <span class="photo-display">
+            <img class="img-thumbnail image-style" src="@Url.Action("GetImage", "Product", new { Id = Model.ProductId, imageNum = 2 })" />
+        </span>
+    }
+
+    @if (Model.ImageName3 != null)
+    {
+        <span class="photo-display">
+            <img class="img-thumbnail image-style" src="@Url.Action("GetImage", "Product", new { Id = Model.ProductId, imageNum = 3 })" />
+        </span>
+    }
+
+    <br />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <span>
+            <a class="btn btn-primary" asp-action="AddItemToCart" asp-controller="product" asp-route-productId="@Model.ProductId">הוסך לסל</a>
+        </span>
+    }
+    else
+    {
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            הוסף לסל
+        </button>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">הודעה התחברות</h5> 
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        עלייך להתחבר על מנת להוסיף פרטים לסל
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-secondary" asp-action="Details" asp-controller="Product">אישור</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <span>
+        <a class="btn btn-primary" asp-action="Index">מסך ראשי</a>
+    </span>
+    <br />
+
+    <span>
+        @Html.DisplayFor(modelItem => modelItem.User.FirstName)
+    </span>
+
+    <span>
+        @Html.DisplayFor(modelItem => modelItem.User.LastName)
+    </span>
+
+    <span>
+        נולד ב @Html.DisplayFor(modelItem => modelItem.User.BirthDate)
+    </span>
+
+    <span>
+        כתובת מייל: @Html.DisplayFor(modelItem => modelItem.User.Email)
+    </span>
+</body>
+

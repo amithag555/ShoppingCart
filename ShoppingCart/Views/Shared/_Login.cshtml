@@ -1,0 +1,75 @@
+﻿@model ShoppingCart.ViewModels.LoginViewModel
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 17)
+    {
+        <span class="myColor-text">
+            צהריים טובים @User.Identity.Name |
+        </span>
+
+        <span class="navbar-text">
+            <a class="nav-link" asp-controller="Account" asp-action="Logout">התנתק</a>
+        </span>
+    }
+    if (DateTime.Now.Hour >= 17 || DateTime.Now.Hour < 6)
+    {
+        <span class="myColor-text">
+            לילה טוב @User.Identity.Name |
+        </span>
+
+        <span class="navbar-text">
+            <a class="nav-link" asp-controller="Account" asp-action="Logout">התנתק</a>
+        </span>
+    }
+    if (DateTime.Now.Hour >= 6 && DateTime.Now.Hour < 12)
+    {
+        <span class="myColor-text">
+            בוקר טוב @User.Identity.Name |
+        </span>
+
+        <span class="navbar-text">
+            <a class="nav-link" asp-controller="Account" asp-action="Logout">התנתק</a>
+        </span>
+    }
+}
+else
+{
+    <form class="form-inline" asp-action="Login" asp-controller="Account" method="post" enctype="multipart/form-data"> 
+
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <label class="sr-only" asp-for="UserName"></label>
+        <input asp-for="UserName" autofocus class="form-control mb-2 mr-sm-2 is is" id="inlineFormInputName2" placeholder="שם משתמש">
+        <span asp-validation-for="UserName" class="text-danger"></span>
+
+        <label class="sr-only" asp-for="Password"></label>
+        <input asp-for="Password" autofocus class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2" placeholder="סיסמא">
+        <span asp-validation-for="Password" class="text-danger"></span>
+
+        <div class="form-check mb-2 mr-sm-2 color-text">
+            <input class="form-check-input" asp-for="RememberMe" id="inlineFormCheck">
+            <label class="form-check-label myColor-text" asp-for="RememberMe">
+                זכור אותי
+            </label>
+            <span asp-validation-for="RememberMe" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">התחבר</button>
+    </form>
+
+    <a asp-controller="Account" asp-action="Register" class="btn btn-success mb-2">הירשם</a>
+}
+
+
+
+
+
+
+
+
+
+
+
+

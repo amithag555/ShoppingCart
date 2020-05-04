@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ShoppingCart.Models.Product>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>
+    @{
+        ViewData["PageName"] = "המוצרים שלי";
+    }
+</h1>
+
+<body>
+
+    @if (User.Identity.IsAuthenticated == false)
+    {
+        <div>
+            אין פריטים בסל
+        </div>
+    }
+    else
+    {
+        if (Model == null)
+        {
+            <div>
+                אין פריטים בסל
+            </div>
+        }
+        else
+        {
+            <table class="table table-hover">
+
+                <thead>
+                    <tr>
+                        <th scope="col">שם הפריט</th>
+                        <th scope="col">תיאור</th>
+                        <th scope="col">מחיר</th>
+                        <th scope="col">פעולות</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a asp-action="Details" asp-route-id="@item.ProductId" asp-controller="Product">@item.Title</a>
+                            </th>
+                            <td>@item.ShortDescription</td>
+                            <td>@item.Price.ToString("C0")</td>
+                            <td>
+                                <a class="btn btn-danger" asp-action="RemoveItemFromCart" asp-route-productId="@item.ProductId" asp-controller="Cart">הסר</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+
+            double totalPrice = 0;
+            double memberPrice = 0;
+
+            foreach (var item in Model)
+            {
+                totalPrice += item.Price;
+            }
+
+            memberPrice = totalPrice - (totalPrice * 0.1); 
+
+            <br />
+            <br />
+
+            <p class="myP-style border border-dark rounded">
+                לתשלום: @totalPrice.ToString("C0")
+                <br />
+                לתשלום חבר: @memberPrice.ToString("C0")
+
+                <br />
+
+                <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#exampleModalLong"> 
+                    קניה
+                </button>
+
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">הודעה רכישה</h5> 
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                הרכישה בוצעה בהצלחה
+                            </div>
+
+                            <div class="modal-footer">                              
+                                <a class="btn btn-secondary" asp-action="ByItem" asp-controller="Cart">אישור</a>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        } 
+    }
+</body>
+

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+          integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+            integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body class="background-color details-body">
+    <div class="layout-pageName">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <a class="navbar-brand" asp-action="Index" asp-controller="Product">מסך ראשי</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-action="Create" asp-controller="Product">פרסום מודעה <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-action="Update" asp-controller="Account">רישום ופרטים אישיים <span class="sr-only">(current)</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link disabled" asp-action="Create" asp-controller="Product">פרסום מודעה</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-action="Register" asp-controller="Account">רישום ופרטים אישיים <span class="sr-only">(current)</span></a>
+                        </li>
+                    }
+
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-action="Index" asp-controller="Cart">סל קניות <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+                @await Html.PartialAsync("_Login", new ShoppingCart.ViewModels.LoginViewModel()) 
+
+            </div> 
+        </nav>
+
+        <h1>
+            @ViewData["PageName"] 
+        </h1> 
+    </div>
+
+    @RenderBody()
+
+</body>
+</html>
+
+
+
+
+

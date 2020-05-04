@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "index";
+} 
+
+<h1>
+    @{
+        ViewData["PageName"] = "רשימת מוצרים";
+    }
+</h1>
+
+<body>
+    @await Html.PartialAsync("__DisplayProduct");
+</body>
+
