@@ -53,7 +53,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<div>\r\n    ");
             EndContext();
             BeginContext(62, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5451820478b4606a614cc4750c76c73", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a61858e62da4f7797d4a97fb5b0dce5", async() => {
                 BeginContext(129, 11, true);
                 WriteLiteral("מיין לפי שם");
                 EndContext();
@@ -78,7 +78,7 @@ namespace AspNetCore
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(150, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8aa449da54a94c6ca323d12d0d29cdfd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e754693474647ee9482b170f921c5fc", async() => {
                 BeginContext(220, 14, true);
                 WriteLiteral("מיין לפי תאריך");
                 EndContext();
@@ -154,7 +154,7 @@ WriteAttributeValue("", 514, Url.Action("GetImage", "Product", new { Id = item.P
             WriteLiteral("</p>\r\n\r\n                    <span>\r\n                        ");
             EndContext();
             BeginContext(934, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "363bcf2e04f34824939ee183cc3dddde", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10f9837c1a2248bc8550aa4c0e4fae09", async() => {
                 BeginContext(1038, 12, true);
                 WriteLiteral("פרטים נוספים");
                 EndContext();
@@ -201,7 +201,7 @@ WriteAttributeValue("", 514, Url.Action("GetImage", "Product", new { Id = item.P
             WriteLiteral("                        <span>\r\n                            ");
             EndContext();
             BeginContext(1228, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d6927ba57d49e3807893df846a3c35", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8763d6f5a4544b685bddb298be3237f", async() => {
                 BeginContext(1345, 8, true);
                 WriteLiteral("הוסך לסל");
                 EndContext();
@@ -270,7 +270,7 @@ WriteAttributeValue("", 514, Url.Action("GetImage", "Product", new { Id = item.P
             WriteLiteral(" class=\"modal-footer\">\r\n                                        ");
             EndContext();
             BeginContext(2752, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05be18edfdb04eeea7d875d000e639c0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb49bf016af348fbbc16f91e99d59130", async() => {
                 BeginContext(2825, 5, true);
                 WriteLiteral("אישור");
                 EndContext();

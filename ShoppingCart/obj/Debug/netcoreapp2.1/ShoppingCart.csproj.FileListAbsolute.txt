@@ -18,7 +18,6 @@ C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\Sh
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\ShoppingCart.RazorTargetAssemblyInfo.cs
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\ShoppingCart.Views.pdb
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\ShoppingCart.csproj.CopyComplete
-C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\ShoppingCart.csprojAssemblyReference.cache
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\obj\Debug\netcoreapp2.1\Razor\Views\Account\Update.cshtml.g.cs

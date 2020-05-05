@@ -70,7 +70,7 @@ namespace AspNetCore
             WriteLiteral("</h1>\r\n\r\n");
             EndContext();
             BeginContext(173, 3396, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44dcddde7b7c47729109008421b48c3a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08927a3fdf4f4d1294660560bec7b608", async() => {
                 BeginContext(179, 4, true);
                 WriteLiteral("\r\n\r\n");
                 EndContext();
@@ -126,7 +126,7 @@ namespace AspNetCore
                 WriteLiteral("                    <tbody>\r\n                        <tr>\r\n                            <th scope=\"row\">\r\n                                ");
                 EndContext();
                 BeginContext(1037, 95, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "645ff7b3e2a5493eb884ca2da60e8f6f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00ed4c3b0a964d69b5cf45096ab29430", async() => {
                     BeginContext(1118, 10, false);
 #line 48 "C:\Users\amith\source\repos\ShoppingCart\ShoppingCart\Views\Cart\Index.cshtml"
                                                                                                            Write(item.Title);
@@ -187,7 +187,7 @@ namespace AspNetCore
                 WriteLiteral("</td>\r\n                            <td>\r\n                                ");
                 EndContext();
                 BeginContext(1361, 125, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8be217e4f1764ef5bc0327ce0730afce", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b9d50ff45abd4d1082d0f06553acb5ff", async() => {
                     BeginContext(1479, 3, true);
                     WriteLiteral("הסר");
                     EndContext();
@@ -298,7 +298,7 @@ namespace AspNetCore
                 WriteLiteral("                         </div>\r\n\r\n                            <div class=\"modal-footer\">                              \r\n                                ");
                 EndContext();
                 BeginContext(3293, 80, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c23239884b3b414a965a8bd5cf8cd9a1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b13e82cf22b74d81836ec4f3b7de730b", async() => {
                     BeginContext(3364, 5, true);
                     WriteLiteral("אישור");
                     EndContext();

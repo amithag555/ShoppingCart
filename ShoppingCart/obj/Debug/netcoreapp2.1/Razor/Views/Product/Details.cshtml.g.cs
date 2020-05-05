@@ -71,7 +71,7 @@ namespace AspNetCore
             WriteLiteral("</h1>\r\n\r\n\r\n");
             EndContext();
             BeginContext(163, 3208, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b24cdf21ad24795a2f597a010f65afb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f9c852f9a8748a0b1f7fa096a8b67b4", async() => {
                 BeginContext(190, 22, true);
                 WriteLiteral("\r\n\r\n    <h3>\r\n        ");
                 EndContext();
@@ -216,7 +216,7 @@ WriteAttributeValue("", 1332, Url.Action("GetImage", "Product", new { Id = Model
                 WriteLiteral("        <span>\r\n            ");
                 EndContext();
                 BeginContext(1530, 130, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0537d25de1047899d8ae7148fc53270", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5957f0b5d63b41ecbf539ae3f98719cb", async() => {
                     BeginContext(1648, 8, true);
                     WriteLiteral("הוסך לסל");
                     EndContext();
@@ -285,7 +285,7 @@ WriteAttributeValue("", 1332, Url.Action("GetImage", "Product", new { Id = Model
                         ");
                 EndContext();
                 BeginContext(2694, 84, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "654cd93f320942709fbf0399e8fa7ac5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "891689dd82a64536a005979d16f7d9f9", async() => {
                     BeginContext(2769, 5, true);
                     WriteLiteral("אישור");
                     EndContext();
@@ -318,7 +318,7 @@ WriteAttributeValue("", 1332, Url.Action("GetImage", "Product", new { Id = Model
                 WriteLiteral("\r\n    <span>\r\n        ");
                 EndContext();
                 BeginContext(2897, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe378989824648728093d1628c8bac9c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3695b83d15e74319bb70fea3e80ddde8", async() => {
                     BeginContext(2943, 8, true);
                     WriteLiteral("מסך ראשי");
                     EndContext();

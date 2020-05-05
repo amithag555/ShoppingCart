@@ -56,8 +56,8 @@ namespace ShoppingCart
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ProductContext productContext)
         {
-            //productContext.Database.EnsureDeleted();  
-            //productContext.Database.EnsureCreated();
+            //productContext.Database.EnsureDeleted();   
+            productContext.Database.EnsureCreated();  
 
             app.UseStaticFiles();
             app.UseAuthentication();
